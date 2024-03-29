@@ -21,6 +21,10 @@ body {
   background-color:#3B3B3B;
 }
 
+.shadow{
+  box-shadow: 2px 2px 2px lightblue;
+}
+
 .hov:hover{
  background-color:#0095A9FF;
  transition: 0.2s;
@@ -61,7 +65,6 @@ h1 {
 .logo img {
   width: 200px; /* Adjust size as needed */
 }
-
 .buttons button {
   padding: 8px 16px;
   margin-left: 10px;
@@ -76,6 +79,7 @@ h1 {
 .spacer {
   flex-grow: 1;
 }
+
 
 /* Media query for responsiveness */
 @media (max-width: 768px) {
@@ -107,23 +111,26 @@ h1 {
 
 }
 
+.history{
+  
+  border-bottom: black;
+}
 
 
 .left {
   flex: 0 0 20%;
   padding-block: 20px;
- 
+  height: 100vh;
+  height:initial;
+  top: 0;
 }
 
 .middle {
-  flex: 0 0 60%;
+  flex: 0 0 80%;
   
 }
 
-.right {
-  flex: 0 0 20%;
 
-}
 
 /* Adjust styles for responsiveness */
 @media (max-width: 768px) {
@@ -140,6 +147,8 @@ h1 {
   position: sticky;
   top: 0;
   z-index: 100;
+  /* border-color: #0095A9FF; */
+  box-shadow: 10px 10px 5px lightblue;
 }
 
 .section {
@@ -147,12 +156,16 @@ h1 {
   display: flex;
   justify-content: center; /* Align text horizontally to center */
   align-items: center; /* Align text vertically to center */
+  
 }
 
 .containere_tabs {
   display: flex;
   justify-content:flex-start; 
   width:100%;
+  border-radius: 10px;
+  border-radius: 10px;
+
 }
 
 
@@ -161,8 +174,6 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  
   position: fixed;
   bottom: 0;
   width: 60%;
@@ -174,7 +185,14 @@ h1 {
   margin-right: 10px;
   padding: 8px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
+  background-color: white;
+  border-color: #0095A9FF;
+  color: black;
+}
+
+.input-bar input[type="text"]::placeholder{
+  color: #0095A9FF;
 }
 
 .input-bar button {
@@ -189,8 +207,12 @@ h1 {
 .chat-bubble{
   color:white;
 }
+
 .chat-start .chat-bubble{
-  background:#3B3B3B
+  background:white;
+  color: black;
+  border-color: #0095A9FF;
+  border-width: 2px;
 }
 .chat-end .chat-bubble{
   background-color: #0095A9FF;
@@ -206,10 +228,12 @@ h1 {
   .left{
     position: relative;
     display: none;
+   
   }
 
   .middle{
     position:absolute;
+    padding-inline: 10px;
   }
 
   .input-bar {
@@ -219,6 +243,7 @@ h1 {
     position:relative;
     width: 100%;
     padding-inline: 30px;
+    background-color: white;
   }
 
   .logo img{

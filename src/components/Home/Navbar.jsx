@@ -31,8 +31,8 @@ function Navbar() {
       </div>
       <div className="spacer"></div>
       <div>Domain:</div>
-      <div className="dropdown pl-2 pr-10" value={selectedValue} onChange={handleChange}>
-        <select className='py-2 rounded-lg px-3'>
+      <div className="dropdown pl-2 pr-10 " value={selectedValue} onChange={handleChange}>
+        <select className='py-2 rounded-lg px-3 bg-white text-black'>
           <option value="Marketing">Marketing</option>
           <option value="Sales">Sales</option>
           <option value="Development">Development</option>
